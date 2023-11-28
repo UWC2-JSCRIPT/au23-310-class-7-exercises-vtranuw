@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       input.setCustomValidity("");
     } else {
       input.parentElement.classList.add("invalid");
-      input.setCustomValidity(`Please enter at least ${min + 1} characters.`);
+      input.setCustomValidity(`Please enter at least ${min} characters.`);
     }
   };
 
@@ -32,11 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
 
     // Perform the all required validations
-    const isNameValid = validLength(nameField, 2); // Name must be 3 or more characters
-    const isEmailValid = validateEmail(emailField);
-    const isMessageValid = validLength(messageField, 9); // Message must be 10 or more characters
+    const isNameValid = validLength(nameField, 3); // Name must be at least 3 characters
+    const isEmailValid = validateEmail(emailField); // Check validation of email
+    const isMessageValid = validLength(messageField, 9); // Message must be at least 10 characters
 
-    // If all validations pass, you can proceed with form submission
+    // If all validations pass, the form is ready for submission
     if (isNameValid && isEmailValid && isMessageValid) {
       console.log("Form is valid. Ready to submit!");
     }

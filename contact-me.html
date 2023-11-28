@@ -35,14 +35,18 @@
       <input type="text" id="jobTitle" name="jobTitle"><br>
 
       <label for="companyWebsite">Company website:</label><br>
-      <input type="url" id="companyWebsite" name="companyWebsite">
+      <input type="url" id="companyWebsite" name="companyWebsite" pattern="https?://.+">
     </div>
 
     <div id="codingLanguage" class="hidden">
       <label for="codingLang">Coding language:</label><br>
-      <input type="text" id="codingLang" name="codingLang"><br>
+      <select id="codingLang" name="codingLang">
+        <option value="Choose One">Choose One</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+      </select>
     </div>
-
     <div>
       <label for="message">Message:</label><br>
       <textarea id="message" name="message" required minlength="10"></textarea>
