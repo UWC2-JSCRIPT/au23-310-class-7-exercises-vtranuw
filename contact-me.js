@@ -27,11 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  // Form submit event listener
+  // Add event listener to Form Submitted
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // Perform the validation
+    // Perform the all required validations
     const isNameValid = validLength(nameField, 2); // Name must be 3 or more characters
     const isEmailValid = validateEmail(emailField);
     const isMessageValid = validLength(messageField, 9); // Message must be 10 or more characters
@@ -39,8 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // If all validations pass, you can proceed with form submission
     if (isNameValid && isEmailValid && isMessageValid) {
       console.log("Form is valid. Ready to submit!");
-      // Here you might want to actually submit the form, e.g., form.submit();
-      // Or handle the form data in another way
     }
   });
 
