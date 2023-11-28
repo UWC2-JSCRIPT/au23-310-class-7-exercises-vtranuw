@@ -1,10 +1,58 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Contact Me</title>
-  </head>
+<html lang="en">
 
-  <body>
-    <!-- TODO -->
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="form-validation.css">
+  <script src="contact-me.js"></script>
+</head>
+
+<body>
+
+  <form id="contact-form">
+    <div>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required minlength="3">
+    </div>
+
+    <div>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required pattern="\w+@\w+\.\w+">
+    </div>
+
+    <div>
+      <label for="contactReason">Reason for contacting:</label><br>
+      <select id="contactReason" name="contactReason">
+        <option value="">Select a reason</option>
+        <option value="Job opportunity">Job opportunity</option>
+        <option value="Talk code">Talk code</option>
+      </select>
+    </div>
+
+    <div id="jobDetails" class="hidden">
+      <label for="jobTitle">Job title:</label><br>
+      <input type="text" id="jobTitle" name="jobTitle"><br>
+
+      <label for="companyWebsite">Company website:</label><br>
+      <input type="url" id="companyWebsite" name="companyWebsite">
+    </div>
+
+    <div id="codingLanguage" class="hidden">
+      <label for="codingLang">Coding language:</label><br>
+      <input type="text" id="codingLang" name="codingLang"><br>
+    </div>
+
+    <div>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" required minlength="10"></textarea>
+    </div>
+
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+
+</body>
+
 </html>
