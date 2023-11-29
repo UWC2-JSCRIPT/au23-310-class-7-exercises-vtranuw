@@ -35,14 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const isNameValid = validLength(nameField, 3); // Name must be at least 3 characters
     const isEmailValid = validateEmail(emailField); // Check validation of email
     const isMessageValid = validLength(messageField, 9); // Message must be at least 10 characters
-
-    // If all validations pass, the form is ready for submission
-    if (isNameValid && isEmailValid && isMessageValid) {
-      console.log("Form is valid. Ready to submit!");
-    }
   });
 
-  // Toggle additional fields based on the reason for contact
   document
     .getElementById("contactReason")
     .addEventListener("change", toggleFields);

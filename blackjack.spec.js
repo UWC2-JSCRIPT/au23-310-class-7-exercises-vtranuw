@@ -1,4 +1,4 @@
-describe("Blackjack Game", function () {
+describe("Blackjack Game Validation", function () {
   describe("calcPoints", function () {
     it("should correctly calculate the score of a hand", function () {
       let hand = [

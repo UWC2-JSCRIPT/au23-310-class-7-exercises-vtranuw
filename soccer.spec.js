@@ -1,4 +1,4 @@
-describe("Soccer Game points calculator", () => {
+describe("Soccer Game Validation", () => {
   describe("getPointsFromResult", () => {
     it("should return 3 points for a win", () => {
       expect(getPointsFromResult("w")).toEqual(3);
